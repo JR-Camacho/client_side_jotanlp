@@ -1,5 +1,7 @@
 import MainLayout from "../../layouts/MainLayout";
 
+import papel_faces from "../../assets/images/papel_faces.jpg";
+
 import {
   Card,
   CardHeader,
@@ -18,26 +20,25 @@ const Home = () => (
       <Card className="mt-6 w-3/4 bg-gray-900 text-white">
         <CardHeader color="blue-gray" className="relative h-56">
           <img
-            src="https://tutorialsbackend.bluehost.in/wp-content/uploads/2023/04/Blog-banner-Sizes-for-Bluehost-1200-x-800-8.png"
+            src={papel_faces}
             alt="img-blur-shadow"
             layout="fill"
           />
         </CardHeader>
         <CardBody>
           <Typography variant="h5" color="white" className="mb-2">
-            SPAM Email detector
+            Sentiment Analysis
           </Typography>
           <Typography>
-            This model has been designed to effectively identify and categorize
-            emails into different classes, such as spam and non-spam. Using
-            machine learning techniques, this classifier analyzes key features
-            of the emails, such as content, sender, subject, among others, to
-            determine their nature. Trust our machine learning-based classifier
-            to keep your inbox organized and free from spam.
+            Our sentiment analysis module utilizes natural language processing
+            and machine learning techniques to assess and understand the
+            emotions behind text. It provides a powerful tool for analyzing the
+            tone, opinion, and polarity of any written content, making it easier
+            to make informed decisions and understand public perception.
           </Typography>
         </CardBody>
         <CardFooter className="pt-0 flex justify-between">
-          <Link to={"/spam-detection"}>
+          <Link to={"/sentiment-analysis"}>
             <Button className="bg-white text-black">Try</Button>
           </Link>
         </CardFooter>
@@ -48,7 +49,7 @@ const Home = () => (
         <CardHeader color="blue-gray" className="relative h-56">
           <img
             src={
-              "https://miro.medium.com/v2/resize:fit:1200/1*JDWy-xAcKMnbYfS3T5goTA.jpeg"
+              "https://engage.sinch.com/sites/default/files/image/2023-07/chatbots-vs-conversational-AI-01-01.png"
             }
             alt="img-blur-shadow"
             layout="fill"
@@ -56,14 +57,14 @@ const Home = () => (
         </CardHeader>
         <CardBody>
           <Typography variant="h5" color="white" className="mb-2">
-            Malicious URL detector
+            ChatBOT
           </Typography>
           <Typography>
-            Powered by advanced machine learning techniques, this model is
-            specifically trained to identify and classify URLs as either safe or
-            malicious. By analyzing various features and patterns in the URLs,
-            such as domain reputation, URL structure, and content, our model can
-            accurately flag potentially harmful links.
+            Our chatbot module is a natural language processing application that
+            enables users to interact with an artificial intelligence program
+            through natural language conversations. It utilizes machine learning
+            algorithms to understand and respond to user questions and commands,
+            providing an advanced human-machine communication experience.
           </Typography>
         </CardBody>
         <CardFooter className="pt-0 flex justify-between">

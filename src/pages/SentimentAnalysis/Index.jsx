@@ -10,7 +10,8 @@ import useApi from "../../hooks/useApi";
 
 import { API_URL } from "../../utils/UtilitiesConts";
 
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
+import { ArrowLeftRight } from "react-bootstrap-icons";
 
 const Index = () => {
   const { loading, isError, data, error, post, setData } = useApi();
@@ -37,30 +38,28 @@ const Index = () => {
 
   return (
     <MainLayout>
-      <div className="min-h-screen">
+      <div className="w-full min-h-screen flex flex-col items-center">
         <Title title={"Sentiment analysis"} className={"pt-[100px]"} />
         <div className="w-full flex flex-col items-center my-6">
-          <div className="flex mb-6">
-            <Button
-              size="sm"
-              className={`rounded-md p-2 mr-2 border-none flex items-center text-3xl ${
-                isEnglish && "text-green-500 focus:ring-green-200"
+          <div className="flex mb-6 items-center">
+            <Typography
+              className={`mr-2 font-bold text-3xl ${
+                isEnglish && "text-green-500"
               }`}
-              onClick={() => changeLanguage(true)}
-              variant="outlined"
             >
               English
-            </Button>
-            <Button
-              size="sm"
-              className={`rounded-md p-2 ml-2 border-none flex items-center text-3xl ${
-                !isEnglish && "text-green-500 focus:ring-green-200"
+            </Typography>
+            <ArrowLeftRight
+              onClick={() => changeLanguage(!isEnglish)}
+              className="cursor-pointer"
+            />
+            <Typography
+              className={`ml-2 font-bold text-3xl ${
+                !isEnglish && "text-green-500"
               }`}
-              onClick={() => changeLanguage(false)}
-              variant="outlined"
             >
               Spanish
-            </Button>
+            </Typography>
           </div>
           <div className="w-11/12 sm:w-3/4 flex flex-col lg:flex-row h-full">
             <div className="relative w-full lg:w-3/5 bg-black h-auto lg:h-[350px] flex flex-col justify-between p-2">
