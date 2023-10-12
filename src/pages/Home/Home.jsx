@@ -68,7 +68,7 @@ const Home = () => (
           </Typography>
         </CardBody>
         <CardFooter className="pt-0 flex justify-between">
-          <Link to={"/malicious-url-detection"}>
+          <Link to={"/chat"}>
             <Button className="bg-white text-black">Try</Button>
           </Link>
         </CardFooter>
